@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.android.spellingCoach.TryWord">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:background="@color/colorPrimaryLight"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:onClick="playAudio"
+                android:text="Play" />
+
+            <Button
+                android:id="@+id/definitionButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:onClick="showDef"
+                android:text="Definition" />
+
+            <Button
+                android:id="@+id/originButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:onClick="showOrigin"
+                android:text="ORIGIN" />
+
+            <Button
+                android:id="@+id/sentenceButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:onClick="showSentence"
+                android:text="SENTENCE" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/wordHints"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/buttons"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            tools:text="This is a test text." />
+
+        <TextView
+            android:id="@+id/spellWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wordHints"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="0dp"
+            tools:text="prestidigitation"
+            android:textAllCaps="true"
+            android:textSize="40sp"
+            />
+        <ImageView
+            android:id="@+id/spellResult"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/wordHints"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            android:src="@drawable/correct"/>
+
+        <TextView
+            android:id="@+id/spelledTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spellWord"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:hint="Use Buttons"
+            android:inputType="textCapCharacters|textNoSuggestions"
+            android:textSize="40sp" />
+
+        <LinearLayout
+            android:id="@+id/letterButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spelledTxt"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/firstLetter"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:onClick="pickLetter"
+                android:textSize="30sp"
+                tools:text="A" />
+
+            <Button
+                android:id="@+id/secondLetter"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:onClick="pickLetter"
+                android:textSize="30sp"
+                tools:text="B" />
+
+            <Button
+                android:id="@+id/thirdLetter"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48dp"
+                android:onClick="pickLetter"
+                android:textSize="30sp"
+                tools:text="C" />
+
+            <Button
+                android:id="@+id/fourthLetter"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:onClick="pickLetter"
+                android:textSize="30sp"
+                tools:text="D" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/actionButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/letterButtons"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="64dp"
+            android:orientation="horizontal">
+            <Button
+            android:id="@+id/btnRestart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="restart"
+            android:text="Start Over" />
+            <Button
+                android:id="@+id/btnCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkAnswer"
+                android:text="Done" />
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+</LinearLayout>

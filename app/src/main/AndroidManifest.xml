@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.spellingCoach">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.android.spellingCoach.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.spellingCoach.WordList"
+            android:label="Word List Activity" />
+        <activity
+            android:name="com.example.android.spellingCoach.WordInfo"
+            android:label="Word Infor Activity" />
+        <activity
+            android:name="com.example.android.spellingCoach.TryWord"
+            android:label="Try Word Activity" />
+        <activity android:name="com.example.android.spellingCoach.DatabaseTest" />
+        <activity
+            android:name="com.example.android.spellingCoach.WordDataManagement"
+            android:label="Database Management" />
+        <activity
+            android:name="com.example.android.spellingCoach.SpellQuiz"
+            android:label="Quiz Activity" />
+        <activity
+            android:name="com.example.android.spellingCoach.NewWords"
+            android:label="New Word Activity" />
+        <activity
+            android:name="com.example.android.spellingCoach.Lesson"
+            android:label="Lesson Activity" />
+
+        <provider
+            android:name="com.example.android.spellingCoach.Data.WordProvider"
+            android:authorities="com.example.android.spellingCoach"
+            android:exported="false" />
+
+        <activity android:name="com.example.android.spellingCoach.QuizReport" />
+        <activity android:name="com.example.android.spellingCoach.Data.WordSpellReport" />
+        <activity android:name="com.example.android.spellingCoach.WordDownload"></activity>
+    </application>
+
+</manifest>

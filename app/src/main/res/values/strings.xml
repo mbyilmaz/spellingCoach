@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Spell Test</string>
+    <string name="title_activity_word_list">WordList</string>
+</resources>
